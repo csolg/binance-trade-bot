@@ -222,8 +222,7 @@ class BinanceAPIManager:
 
         order_quantity = self._buy_quantity(origin_symbol, target_symbol, target_balance, from_coin_price)
         order_quantity_s = "{:0.0{}f}".format(order_quantity, 8)
-
-        self.logger.info(f"BUY QTY {order_quantity}")
+        self.logger.info(f"BUY QTY {order_quantity_s} of <{origin_symbol}>")
 
         # Try to buy until successful
         order = None
